@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component styles */
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-500 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-danger {
+    @apply bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+  
+  .form-textarea {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-lg p-6;
+  }
+  
+  .error-message {
+    @apply bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg mb-4;
+  }
+}
+
+/* Custom styling for past booking dates in calendars */
+.react-datepicker__day.past-booked-date {
+  background-color: #e5e7eb !important;
+  color: #6b7280 !important;
+  border-radius: 0.25rem !important;
+}
+
+.react-datepicker__day.past-booked-date:hover {
+  background-color: #d1d5db !important;
+  color: #4b5563 !important;
+}
